@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!--Hotéis -->
+    <div class="container">
+        <h3 align="center">Hotéis</h3>
+        <div class="section">
+            <form action="" method="POST">
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="medium card">
+                            <div class="card-image">
+                                <img src="{{ url_for('static', filename='hotel1.png') }}">
+                                <span class="card-title">Hotel Plaza Azul</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod scelerisque
+                                    commodo. Aenean non orci.</p>
+                            </div>
+                            <div class="card-action">
+                                {% if current_user.is_authenticated %}
+                                    <input type="submit" class="btn btn-default" name="hotel1" value="Reservar">
+                                {% else %}
+                                    <a href="{{ url_for('login') }}" class="btn btn-default">Reservar</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m6">
+                        <div class="medium card">
+                            <div class="card-image">
+                                <img src="{{ url_for('static', filename='hotel2.png') }}">
+                                <span class="card-title">Hotel Atlanta</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod scelerisque
+                                    commodo. Aenean non orci.</p>
+                            </div>
+                            <div class="card-action">
+                                {% if current_user.is_authenticated %}
+                                    <input type="submit" class="btn btn-default" name="hotel2" value="Reservar">
+                                {% else %}
+                                    <a href="{{ url_for('login') }}" class="btn btn-default">Reservar</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="medium card">
+                            <div class="card-image">
+                                <img src="{{ url_for('static', filename='hotel3.png') }}">
+                                <span class="card-title">Hotel Zumahy</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod scelerisque
+                                    commodo. Aenean non orci.</p>
+                            </div>
+                            <div class="card-action">
+                                {% if current_user.is_authenticated %}
+                                    <input type="submit" class="btn btn-default" name="hotel3" value="Reservar">
+                                {% else %}
+                                    <a href="{{ url_for('login') }}" class="btn btn-default">Reservar</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m6">
+                        <div class="medium card">
+                            <div class="card-image">
+                                <img src="{{ url_for('static', filename='hotel4.png') }}">
+                                <span class="card-title">Hotel Aparty</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod scelerisque
+                                    commodo. Aenean non orci.</p>
+                            </div>
+                            <div class="card-action">
+                                {% if current_user.is_authenticated %}
+                                    <input type="submit" class="btn btn-default" name="hotel4" value="Reservar">
+                                {% else %}
+                                    <a href="{{ url_for('login') }}" class="btn btn-default">Reservar</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- Modal -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Reservado com sucesso</h4>
+                    <p>Parabéns, sua reserva foi finalizada com sucesso!</p>
+                    <p>Dirija-se ao Hotel para Check-in!</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Muito obrigado!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
